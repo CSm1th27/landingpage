@@ -342,11 +342,21 @@
       gap: 1.25rem;
     }
 
+    /* Badge image container with fallback styling */
     .cert-badge-img {
       width: 64px;
       height: 64px;
       object-fit: contain;
       flex-shrink: 0;
+      border-radius: 0.375rem;
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-color);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .cert-title {
@@ -499,7 +509,7 @@
         <!-- AWS Cloud Practitioner -->
         <div class="cert-item">
           <div class="cert-info">
-            <img src="images/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner Badge" class="cert-badge-img">
+            <img src="aws-certified-cloud-practitioner.png" alt="AWS Cloud Practitioner Badge" class="cert-badge-img">
             <div>
               <div class="cert-title">AWS Certified Cloud Practitioner</div>
               <div class="cert-issuer">Amazon Web Services</div>
@@ -511,7 +521,7 @@
         <!-- Cisco Operating Systems Basics -->
         <div class="cert-item">
           <div class="cert-info">
-            <img src="images/operating-systems-basics.png" alt="Cisco Networking Academy Operating Systems Basics Badge" class="cert-badge-img">
+            <img src="operating-systems-basics.png" alt="Cisco OS Basics Badge" class="cert-badge-img">
             <div>
               <div class="cert-title">Operating Systems Basics</div>
               <div class="cert-issuer">Cisco Networking Academy</div>
@@ -523,7 +533,7 @@
         <!-- Cisco Computer Hardware Basics -->
         <div class="cert-item">
           <div class="cert-info">
-            <img src="images/computer-hardware-basics.png" alt="Cisco Networking Academy Computer Hardware Basics Badge" class="cert-badge-img">
+            <img src="computer-hardware-basics.png" alt="Cisco Hardware Basics Badge" class="cert-badge-img">
             <div>
               <div class="cert-title">Computer Hardware Basics</div>
               <div class="cert-issuer">Cisco Networking Academy</div>
