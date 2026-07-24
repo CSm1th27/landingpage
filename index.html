@@ -204,6 +204,14 @@
       letter-spacing: -0.02em;
     }
 
+    .subsection-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+
     /* Technical Skills Section */
     .skills-section {
       padding: 4rem 0;
@@ -336,13 +344,17 @@
       box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.05);
     }
 
+    .cert-item.in-progress {
+      border-style: dashed;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
     .cert-info {
       display: flex;
       align-items: center;
       gap: 1.25rem;
     }
 
-    /* Badge image container with fallback styling */
     .cert-badge-img {
       width: 64px;
       height: 64px;
@@ -357,6 +369,22 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .cert-badge-placeholder {
+      width: 64px;
+      height: 64px;
+      border-radius: 0.375rem;
+      background-color: var(--bg-light);
+      border: 1px dashed var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.2rem;
+      font-family: 'JetBrains Mono', monospace;
+      flex-shrink: 0;
     }
 
     .cert-title {
@@ -503,7 +531,7 @@
 
     <!-- Certifications -->
     <section id="certifications" class="certs-section" aria-labelledby="certs-title">
-      <h2 id="certs-title" class="section-title">Certifications & Badges</h2>
+      <h2 id="certs-title" class="section-title">Certifications & Training</h2>
       
       <div class="cert-list">
         <!-- AWS Cloud Practitioner -->
@@ -542,6 +570,47 @@
           <span class="tag" style="background-color: var(--accent-badge); color: var(--accent-badge-text); border-color: #7be3d5;">Verified</span>
         </div>
       </div>
+
+      <!-- Currently Pursuing / Training Programs -->
+      <h3 class="subsection-title">Currently Pursuing</h3>
+      <div class="cert-list">
+        <!-- Per Scholas AI Enabled IT Support -->
+        <div class="cert-item in-progress">
+          <div class="cert-info">
+            <div class="cert-badge-placeholder">&gt;_</div>
+            <div>
+              <div class="cert-title">AI Enabled IT Support Training Program</div>
+              <div class="cert-issuer">Per Scholas</div>
+            </div>
+          </div>
+          <span class="tag" style="background-color: #FFF3CD; color: #856404; border-color: #FFEEBA;">In Progress</span>
+        </div>
+
+        <!-- AWS Solutions Architect -->
+        <div class="cert-item in-progress">
+          <div class="cert-info">
+            <div class="cert-badge-placeholder">&gt;_</div>
+            <div>
+              <div class="cert-title">AWS Certified Solutions Architect – Associate</div>
+              <div class="cert-issuer">Amazon Web Services</div>
+            </div>
+          </div>
+          <span class="tag" style="background-color: #FFF3CD; color: #856404; border-color: #FFEEBA;">In Progress</span>
+        </div>
+
+        <!-- CompTIA Certs -->
+        <div class="cert-item in-progress">
+          <div class="cert-info">
+            <div class="cert-badge-placeholder">&gt;_</div>
+            <div>
+              <div class="cert-title">CompTIA Network+ / Security+</div>
+              <div class="cert-issuer">CompTIA</div>
+            </div>
+          </div>
+          <span class="tag" style="background-color: #FFF3CD; color: #856404; border-color: #FFEEBA;">In Progress</span>
+        </div>
+      </div>
+
     </section>
 
   </main>
