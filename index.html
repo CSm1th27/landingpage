@@ -1190,7 +1190,112 @@
 
         </div> 
 
-  
+/* --- Troubleshooting Videos Interactive Pocket --- */
+    .video-pocket-folder {
+      margin-top: 2.5rem;
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .video-pocket-folder summary {
+      padding: 1.25rem 1.75rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--secondary);
+      cursor: pointer;
+      list-style: none; /* Hides default triangle arrow */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+      user-select: none;
+    }
+
+    .video-pocket-folder summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .video-pocket-folder summary:hover {
+      background-color: rgba(26, 166, 166, 0.05);
+    }
+
+    .folder-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .folder-icon {
+      font-size: 1.4rem;
+    }
+
+    .toggle-arrow {
+      font-size: 0.85rem;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .video-pocket-folder[open] .toggle-arrow {
+      transform: rotate(180deg);
+    }
+
+    .pocket-content {
+      padding: 1.5rem 1.75rem 2rem;
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-light);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .video-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      background-color: #000;
+    }
+
+    .video-container video,
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-info {
+      padding: 1rem;
+    }
+
+    .video-info h4 {
+      font-size: 1rem;
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .video-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }  
 
       </div> 
 
