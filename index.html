@@ -55,8 +55,7 @@
       --bg-white: #FFFFFF;            /* Pure White for Cards */ 
 
       --border-color: #E0E0E0; 
-
-  
+    }
 
     * {  
 
@@ -540,6 +539,125 @@
 
   
 
+    /* Expandable Troubleshooting Video Folder */
+    .videos-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .video-folder {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 0.9rem;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .folder-button {
+      width: 100%;
+      border: 0;
+      background: var(--bg-white);
+      color: var(--secondary);
+      padding: 1.35rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+      font: inherit;
+    }
+
+    .folder-button:hover {
+      background-color: #F8FCFC;
+    }
+
+    .folder-heading {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .folder-icon {
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .folder-title {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .folder-subtitle {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-top: 0.15rem;
+    }
+
+    .folder-arrow {
+      font-size: 1.4rem;
+      transition: transform 0.25s ease;
+    }
+
+    .folder-button[aria-expanded="true"] .folder-arrow {
+      transform: rotate(180deg);
+    }
+
+    .folder-pocket {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      border-top: 0 solid var(--border-color);
+      transition: max-height 0.45s ease, opacity 0.25s ease, padding 0.35s ease;
+      padding: 0 1.5rem;
+    }
+
+    .folder-pocket.open {
+      max-height: 4000px;
+      opacity: 1;
+      border-top-width: 1px;
+      padding: 1.5rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .video-card {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+
+    .video-card video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #111;
+      object-fit: cover;
+    }
+
+    .video-info {
+      padding: 1rem;
+    }
+
+    .video-info h3 {
+      color: var(--secondary);
+      font-size: 1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .video-info p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
     /* Projects Showcase */  
 
     .projects-section {  
@@ -850,6 +968,7 @@
 
         <li><a href="#skills">Skills</a></li>  
 
+        <li><a href="#videos">Videos</a></li>
         <li><a href="#projects">Projects</a></li>  
 
         <li><a href="#certifications">Certifications</a></li>  
@@ -892,23 +1011,122 @@
 
       </div>  
 
-    </section>  
+    </section>
+  <section id="skills" class="skills-section" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">Technical Competencies</h2>
+      <div class="skills-grid">
+<!-- Systems & OS --> 
+        <div class="skill-card"> 
+            <h3>Systems & OS</h3> 
+            <div class="tag-container"> 
+                <span class="tag">Troubleshooting</span> 
+                <span class="tag">System Troubleshooting</span> 
+                <span class="tag">Mobile Devices</span> 
+                <span class="tag">Virtualization</span> 
+                <span class="tag">Customer Support</span> 
+                <span class="tag">Remote Support</span> 
+                <span class="tag">Ticketing Systems</span> 
+                <span class="tag">CompTIA A+ Core 1</span> 
+                <span class="tag">Google Technical Support</span> 
+            </div> 
+        </div> 
+ 
+        <!-- Networking & Security --> 
+        <div class="skill-card"> 
+            <h3>Networking & Security</h3> 
+            <div class="tag-container"> 
+                <span class="tag">Networking Basics</span> 
+                <span class="tag">Incident Response</span> 
+                <span class="tag">Cloud Security</span> 
+                <span class="tag">IAM Basics</span> 
+                <span class="tag">Change Management</span> 
+                <span class="tag">Service Lifecycle</span> 
+                <span class="tag">ITIL Foundations</span> 
+            </div> 
+        </div> 
+ 
+        <!-- Cloud & DevOps --> 
+        <div class="skill-card"> 
+            <h3>Cloud & DevOps</h3> 
+            <div class="tag-container"> 
+                <span class="tag">AWS Cloud Foundations</span> 
+                <span class="tag">S3 Storage</span> 
+                <span class="tag">EC2 Basics</span> 
+                <span class="tag">Google AI Essentials</span> 
+                <span class="tag">Prompt Engineering</span> 
+                <span class="tag">ML Basics</span> 
+                <span class="tag">Automation Concepts</span> 
+                <span class="tag">Data Ethics</span> 
+            </div> 
+        </div> 
+ 
+    </div> 
+ 
+</section> 
 
   
 
-   <section class="tech-competencies"> 
+    <!-- Expandable Troubleshooting Video Library -->
+    <section id="videos" class="videos-section" aria-labelledby="videos-title">
+      <h2 id="videos-title" class="section-title">Troubleshooting Videos</h2>
 
-    <h2>Technical Competencies</h2> 
+      <div class="video-folder">
+        <button
+          class="folder-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="troubleshooting-video-pocket"
+        >
+          <span class="folder-heading">
+            <span class="folder-icon" aria-hidden="true">📁</span>
+            <span>
+              <span class="folder-title">Open Troubleshooting Videos</span>
+              <span class="folder-subtitle">Labs, walkthroughs, and technical problem-solving demonstrations</span>
+            </span>
+          </span>
+          <span class="folder-arrow" aria-hidden="true">⌄</span>
+        </button>
 
-  <section id="skills" class="skills-section" aria-labelledby="skills-title">  
+        <div id="troubleshooting-video-pocket" class="folder-pocket" aria-hidden="true">
+          <div class="video-grid">
 
-      <h2 id="skills-title" class="section-title">Technical Competencies</h2>  
+            <article class="video-card">
+              <video controls preload="metadata" poster="images/dual-monitor-thumbnail.jpg">
+                <source src="videos/dual-monitor-troubleshooting.mp4" type="video/mp4">
+                Your browser does not support embedded video.
+              </video>
+              <div class="video-info">
+                <h3>Dual-Monitor Display Troubleshooting</h3>
+                <p>Diagnosing a second monitor that is connected but not displaying, including cable, input, and display-setting checks.</p>
+              </div>
+            </article>
 
-        
+            <article class="video-card">
+              <video controls preload="metadata" poster="images/raid5-thumbnail.jpg">
+                <source src="videos/raid-5-setup.mp4" type="video/mp4">
+                Your browser does not support embedded video.
+              </video>
+              <div class="video-info">
+                <h3>RAID 5 Configuration</h3>
+                <p>A walkthrough of selecting drives, creating a RAID 5 array, and confirming that the storage configuration is operational.</p>
+              </div>
+            </article>
 
-  <!-- Systems & OS --> <div class="skill-card"> <h3>Systems & OS</h3> <div class="tag-container"> <span class="tag">Troubleshooting</span> <span class="tag">System Troubleshooting</span> <span class="tag">Mobile Devices</span> <span class="tag">Virtualization</span> <span class="tag">Customer Support</span> <span class="tag">Remote Support</span> <span class="tag">Ticketing Systems</span> <span class="tag">CompTIA A+ Core 1</span> <span class="tag">Google Technical Support</span> </div> </div> <!-- Networking & Security --> <div class="skill-card"> <h3>Networking & Security</h3> <div class="tag-container"> <span class="tag">Networking Basics</span> <span class="tag">Incident Response</span> <span class="tag">Cloud Security</span> <span class="tag">IAM Basics</span> <span class="tag">Change Management</span> <span class="tag">Service Lifecycle</span> <span class="tag">ITIL Foundations</span> </div> </div> <!-- Cloud & DevOps --> <div class="skill-card"> <h3>Cloud & DevOps</h3> <div class="tag-container"> <span class="tag">AWS Cloud Foundations</span> <span class="tag">S3 Storage</span> <span class="tag">EC2 Basics</span> <span class="tag">Google AI Essentials</span> <span class="tag">Prompt Engineering</span> <span class="tag">ML Basics</span> <span class="tag">Automation Concepts</span> <span class="tag">Data Ethics</span> </div> </div> </div> </section> 
+            <article class="video-card">
+              <video controls preload="metadata" poster="images/boot-troubleshooting-thumbnail.jpg">
+                <source src="videos/boot-troubleshooting.mp4" type="video/mp4">
+                Your browser does not support embedded video.
+              </video>
+              <div class="video-info">
+                <h3>Computer Boot Troubleshooting</h3>
+                <p>Applying the troubleshooting methodology to inspect power, connections, hardware indicators, and startup behavior.</p>
+              </div>
+            </article>
 
-  
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Project Showcase -->  
 
@@ -1190,112 +1408,7 @@
 
         </div> 
 
-/* --- Troubleshooting Videos Interactive Pocket --- */
-    .video-pocket-folder {
-      margin-top: 2.5rem;
-      background: var(--bg-white);
-      border: 1px solid var(--border-color);
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-
-    .video-pocket-folder summary {
-      padding: 1.25rem 1.75rem;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--secondary);
-      cursor: pointer;
-      list-style: none; /* Hides default triangle arrow */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background-color 0.2s ease;
-      user-select: none;
-    }
-
-    .video-pocket-folder summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .video-pocket-folder summary:hover {
-      background-color: rgba(26, 166, 166, 0.05);
-    }
-
-    .folder-title-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .folder-icon {
-      font-size: 1.4rem;
-    }
-
-    .toggle-arrow {
-      font-size: 0.85rem;
-      color: var(--primary);
-      transition: transform 0.3s ease;
-    }
-
-    .video-pocket-folder[open] .toggle-arrow {
-      transform: rotate(180deg);
-    }
-
-    .pocket-content {
-      padding: 1.5rem 1.75rem 2rem;
-      border-top: 1px solid var(--border-color);
-      background-color: var(--bg-light);
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .video-card {
-      background-color: var(--bg-white);
-      border: 1px solid var(--border-color);
-      border-radius: 0.5rem;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
-      background-color: #000;
-    }
-
-    .video-container video,
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-info {
-      padding: 1rem;
-    }
-
-    .video-info h4 {
-      font-size: 1rem;
-      color: var(--secondary);
-      margin-bottom: 0.5rem;
-    }
-
-    .video-info p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }  
+  
 
       </div> 
 
@@ -1316,6 +1429,20 @@
   </footer> 
 
   
+
+  <script>
+    const folderButton = document.querySelector('.folder-button');
+    const folderPocket = document.getElementById('troubleshooting-video-pocket');
+
+    if (folderButton && folderPocket) {
+      folderButton.addEventListener('click', () => {
+        const isOpen = folderButton.getAttribute('aria-expanded') === 'true';
+        folderButton.setAttribute('aria-expanded', String(!isOpen));
+        folderPocket.setAttribute('aria-hidden', String(isOpen));
+        folderPocket.classList.toggle('open', !isOpen);
+      });
+    }
+  </script>
 
 </body> 
 
