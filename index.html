@@ -55,7 +55,8 @@
       --bg-white: #FFFFFF;            /* Pure White for Cards */ 
 
       --border-color: #E0E0E0; 
-    }
+
+  
 
     * {  
 
@@ -539,125 +540,6 @@
 
   
 
-    /* Expandable Troubleshooting Video Folder */
-    .videos-section {
-      padding: 4rem 0;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .video-folder {
-      background-color: var(--bg-white);
-      border: 1px solid var(--border-color);
-      border-radius: 0.9rem;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-    }
-
-    .folder-button {
-      width: 100%;
-      border: 0;
-      background: var(--bg-white);
-      color: var(--secondary);
-      padding: 1.35rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      cursor: pointer;
-      text-align: left;
-      font: inherit;
-    }
-
-    .folder-button:hover {
-      background-color: #F8FCFC;
-    }
-
-    .folder-heading {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-    }
-
-    .folder-icon {
-      font-size: 1.8rem;
-      line-height: 1;
-    }
-
-    .folder-title {
-      display: block;
-      font-size: 1.15rem;
-      font-weight: 800;
-    }
-
-    .folder-subtitle {
-      display: block;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      font-weight: 500;
-      margin-top: 0.15rem;
-    }
-
-    .folder-arrow {
-      font-size: 1.4rem;
-      transition: transform 0.25s ease;
-    }
-
-    .folder-button[aria-expanded="true"] .folder-arrow {
-      transform: rotate(180deg);
-    }
-
-    .folder-pocket {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      border-top: 0 solid var(--border-color);
-      transition: max-height 0.45s ease, opacity 0.25s ease, padding 0.35s ease;
-      padding: 0 1.5rem;
-    }
-
-    .folder-pocket.open {
-      max-height: 4000px;
-      opacity: 1;
-      border-top-width: 1px;
-      padding: 1.5rem;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .video-card {
-      background-color: var(--bg-light);
-      border: 1px solid var(--border-color);
-      border-radius: 0.75rem;
-      overflow: hidden;
-    }
-
-    .video-card video {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background-color: #111;
-      object-fit: cover;
-    }
-
-    .video-info {
-      padding: 1rem;
-    }
-
-    .video-info h3 {
-      color: var(--secondary);
-      font-size: 1rem;
-      margin-bottom: 0.45rem;
-    }
-
-    .video-info p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
     /* Projects Showcase */  
 
     .projects-section {  
@@ -968,7 +850,6 @@
 
         <li><a href="#skills">Skills</a></li>  
 
-        <li><a href="#videos">Videos</a></li>
         <li><a href="#projects">Projects</a></li>  
 
         <li><a href="#certifications">Certifications</a></li>  
@@ -997,9 +878,9 @@
 
       </div>  
 
-       <h1 id="hero-title">IT Specialist & Systems Engineer</h1>  
+       <h1 id="hero-title">IT Support Specialist | Cloud Computing Student</h1>  
 
-       <p>Aspiring IT professional currently in training across cloud infrastructure, IT support, AI application, and corporate professionalism.</p>  
+       <p>CompTIA A+ certified IT professional with hands-on experience troubleshooting Windows systems, hardware, networking, Active Directory, Linux, PowerShell, and cloud technologies. Currently expanding my skills through Per Scholas and a B.S. in Cloud Computing.</p>  
 
         
 
@@ -1011,11 +892,21 @@
 
       </div>  
 
-    </section>
-  <section id="skills" class="skills-section" aria-labelledby="skills-title">
-      <h2 id="skills-title" class="section-title">Technical Competencies</h2>
-      <div class="skills-grid">
-<!-- Systems & OS --> 
+    </section>  
+
+  
+
+   <section class="tech-competencies"> 
+
+    <h2>Technical Competencies</h2> 
+
+  <section id="skills" class="skills-section" aria-labelledby="skills-title">  
+
+      <h2 id="skills-title" class="section-title">Technical Competencies</h2>  
+
+        
+
+  <!-- Systems & OS --> 
         <div class="skill-card"> 
             <h3>Systems & OS</h3> 
             <div class="tag-container"> 
@@ -1066,166 +957,6 @@
 
   
 
-    <!-- Expandable Troubleshooting Video Library -->
-    <section id="videos" class="videos-section" aria-labelledby="videos-title">
-      <h2 id="videos-title" class="section-title">Troubleshooting Videos</h2>
-
-      <div class="video-folder">
-        <button
-          class="folder-button"
-          type="button"
-          aria-expanded="false"
-          aria-controls="troubleshooting-video-pocket"
-        >
-          <span class="folder-heading">
-            <span class="folder-icon" aria-hidden="true">📁</span>
-            <span>
-              <span class="folder-title">Open Troubleshooting Videos</span>
-              <span class="folder-subtitle">Labs, walkthroughs, and technical problem-solving demonstrations</span>
-            </span>
-          </span>
-          <span class="folder-arrow" aria-hidden="true">⌄</span>
-        </button>
-
-        <div id="troubleshooting-video-pocket" class="folder-pocket" aria-hidden="true">
-          <div class="video-grid">
-
-            <article class="video-card">
-              <video controls preload="metadata" poster="images/dual-monitor-thumbnail.jpg">
-                <source src="videos/dual-monitor-troubleshooting.mp4" type="video/mp4">
-                Your browser does not support embedded video.
-              </video>
-              <div class="video-info">
-                <h3>Dual-Monitor Display Troubleshooting</h3>
-                <p>Diagnosing a second monitor that is connected but not displaying, including cable, input, and display-setting checks.</p>
-              </div>
-            </article>
-
-            <article class="video-card">
-              <video controls preload="metadata" poster="images/raid5-thumbnail.jpg">
-                <source src="videos/raid-5-setup.mp4" type="video/mp4">
-                Your browser does not support embedded video.
-              </video>
-              <div class="video-info">
-                <h3>RAID 5 Configuration</h3>
-                <p>A walkthrough of selecting drives, creating a RAID 5 array, and confirming that the storage configuration is operational.</p>
-              </div>
-            </article>
-
-            <article class="video-card">
-              <video controls preload="metadata" poster="images/boot-troubleshooting-thumbnail.jpg">
-                <source src="videos/boot-troubleshooting.mp4" type="video/mp4">
-                Your browser does not support embedded video.
-              </video>
-              <div class="video-info">
-                <h3>Computer Boot Troubleshooting</h3>
-                <p>Applying the troubleshooting methodology to inspect power, connections, hardware indicators, and startup behavior.</p>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Project Showcase -->  
-
-    <section id="projects" class="projects-section" aria-labelledby="projects-title">  
-
-      <h2 id="projects-title" class="section-title">Featured Labs & Projects</h2>  
-
-        
-
-       <div class="project-grid"> 
-
-        <!-- Project 1 --> 
-
-        <article class="project-card"> 
-
-          <div> 
-
-            <h3>Enterprise Active Directory Lab</h3> 
-
-            <p>Configured a multi-domain Active Directory environment with GPOs, automated user onboarding via PowerShell, and DNS/DHCP integration.</p> 
-
-            <div class="tag-container tags"> 
-
-              <span class="tag">Windows Server</span> 
-
-              <span class="tag">PowerShell</span> 
-
-              <span class="tag">Hyper-V</span> 
-
-            </div> 
-
-          </div> 
-
-          <a href="#" class="project-link">View Documentation &rarr;</a> 
-
-        </article> 
-
-  
-
-        <!-- Project 2 --> 
-
-        <article class="project-card"> 
-
-          <div> 
-
-            <h3>Automated Cloud Web Architecture</h3> 
-
-            <p>Deployed a load-balanced high-availability web app structure on AWS using Terraform for Infrastructure as Code (IaC).</p> 
-
-            <div class="tag-container tags"> 
-
-              <span class="tag">AWS</span> 
-
-              <span class="tag">Terraform</span> 
-
-              <span class="tag">Nginx</span> 
-
-            </div> 
-
-          </div> 
-
-          <a href="#" class="project-link">View Architecture Diagram &rarr;</a> 
-
-        </article> 
-
-  
-
-        <!-- Project 3 --> 
-
-        <article class="project-card"> 
-
-          <div> 
-
-            <h3>Homelab Monitoring & SIEM</h3> 
-
-            <p>Set up an ELK Stack and Prometheus/Grafana instance to collect syslog feeds and metric monitoring across local Linux servers.</p> 
-
-            <div class="tag-container tags"> 
-
-              <span class="tag">Docker</span> 
-
-              <span class="tag">Linux</span> 
-
-              <span class="tag">Grafana</span> 
-
-            </div> 
-
-          </div> 
-
-          <a href="#" class="project-link">View Writeup &rarr;</a> 
-
-        </article> 
-
-      </div> 
-
-    </section> 
-
-  
-
     <!-- Certifications & Badges --> 
 
     <section id="certifications" class="certs-section" aria-labelledby="certs-title"> 
@@ -1234,7 +965,43 @@
 
        
 
-      <div class="cert-list"> 
+<!-- CompTIA A+ --> 
+
+<div class="cert-item"> 
+
+  <div class="cert-info"> 
+
+    <img src="comptia-a-plus.png" alt="CompTIA A+ Certification Badge" class="cert-badge-img"> 
+
+    <div> 
+
+      <div class="cert-title">CompTIA A+</div> 
+
+      <div class="cert-issuer">CompTIA</div> 
+
+    </div> 
+
+  </div> 
+
+  
+
+  <span class="tag" 
+
+        style="background-color: var(--accent-badge); 
+
+               color: var(--accent-badge-text); 
+
+               border-color: #7be3d5;"> 
+
+    Certified 
+
+  </span> 
+
+</div> 
+
+     
+
+  <div class="cert-list"> 
 
         <!-- AWS Cloud Practitioner --> 
 
@@ -1364,30 +1131,6 @@
 
   
 
-        <!-- CompTIA A+ --> 
-
-        <div class="cert-item in-progress"> 
-
-          <div class="cert-info"> 
-
-            <div> 
-
-              <div class="cert-title">CompTIA A+</div> 
-
-              <div class="cert-issuer">CompTIA</div> 
-
-              <div class="cert-note">Core 1 Completed &bull; Core 2 In Progress</div> 
-
-            </div> 
-
-          </div> 
-
-          <span class="tag" style="background-color: #FEF3C7; color: #92400E; border-color: #FDE68A;">In Progress</span> 
-
-        </div> 
-
-  
-
         <!-- LPI Linux Essentials --> 
 
         <div class="cert-item in-progress"> 
@@ -1429,20 +1172,6 @@
   </footer> 
 
   
-
-  <script>
-    const folderButton = document.querySelector('.folder-button');
-    const folderPocket = document.getElementById('troubleshooting-video-pocket');
-
-    if (folderButton && folderPocket) {
-      folderButton.addEventListener('click', () => {
-        const isOpen = folderButton.getAttribute('aria-expanded') === 'true';
-        folderButton.setAttribute('aria-expanded', String(!isOpen));
-        folderPocket.setAttribute('aria-hidden', String(isOpen));
-        folderPocket.classList.toggle('open', !isOpen);
-      });
-    }
-  </script>
 
 </body> 
 
